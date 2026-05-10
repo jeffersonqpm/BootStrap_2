@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jeff.css">
+    <title>Projetos</title>
+</head>
+
+<body class=" container-fluid">
+
+    <!-- <div class="container">
+        <div>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tarefas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="" aria-disabled="true">Usuarios</a>
+
+                </li>
+            </ul>
+        </div>
+    </div> -->
+
+
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> -->
+    <nav class="navbar navbar-expand-lg navbar-white bg-white">
+        <div class="login-box, logo_2">
+            <a href=""><img src="img/logo_2.png" alt=""></a>
+        </div>
+        <div class="container-fluid">
+            <div class="ajusteBotaoMenu">
+                <button type="button" class="btn btn-light botaoMenu"
+                    onclick="window.location.href='index.html'"><i class="bi bi-grid-1x2-fill me-2"></i> Dashboard</button>
+
+                <!-- <a class="navbar-brand" href="index.html">Dashboard</a> -->
+                <button type="button" class="btn btn-light botaoMenu"
+                    onclick="window.location.href='tarefa.html'"><i class="bi bi-card-checklist" style="margin-right: 5px;"></i>Tarefas</button>
+                <!-- <a class="navbar-brand" href="tarefa.html">Tarefas</a> -->
+                <button type="button" class="btn btn-primary botaoMenu"
+                    onclick="window.location.href='projeto.html'"><i class="bi bi-share" style="margin-right: 5px;"></i>Projetos</button>
+
+                <!-- <a class="navbar-brand" href="projeto.html">Projetos</a> -->
+                <button type="button" class="btn btn-light botaoMenu"
+                    onclick="window.location.href='usuario.html'"><i class="bi bi-person" style="margin-right: 5px;"></i>Usuários</button>
+                <!-- <a class="navbar-brand" href="usuario.html">Usuários</a> -->
+
+                <!-- Toggler para mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    value="okkkkk">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- ms-auto empurra este ul para a direita -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+
+                            <!-- <img src="img/person.svg" alt="User" width="30" height="30" class="rounded-circle me-1" > -->
+
+                            <i class="bi bi-person jeff"></i>
+
+                            Olá, Jefferson
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Perfil</a></li>
+                            <li><a class="dropdown-item" href="#">Configurações</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sair</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h1>Adicionar Novo Projeto</h1><br>
+        <form action="">
+            <div class="text-end">
+                <button type="button" class="btn btn-warning negrito" data-bs-toggle="modal"
+                    data-bs-target="#modalProjeto"><i class="bi bi-card-list" style="margin-right: 7px; font-size: 1.2rem;"></i>Lista de Projetos</button>
+                <!-- <button type="button" class="btn btn-dark">Lista de Projetos</button> -->
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nome do projeto: <span
+                        class="obrigatorio">*</span></label>
+                <input type="text" class="form-control" id="nomeProjeto" aria-describedby="emailHelp">
+
+            </div>
+            <label class="form-label">Descrição: <span class="obrigatorio">*</span></label>
+
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                <label for="floatingTextarea">Descreva o projeto</label>
+            </div><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Data de criação: <span class="obrigatorio">*</span></label>
+                        <input type="date" class="form-control" id="dataCriacao">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Data de conclusão: <span class="obrigatorio">*</span></label>
+                        <input type="date" class="form-control" id="dataConclusao">
+                    </div>
+                </div>
+            </div><br>
+
+            <div class="row ">
+                <div class="col-md-6 ">
+                    <label class="form-label">Status: <span class="obrigatorio">*</span></label>
+                    <select class="form-select prioridadetarefa prioridadetarefa" id="status">
+                        <option selected>Selecione</option>
+                        <option value="PENDENTE">Pendente</option>
+                        <option value="EM ANDAMENTO">Em execução</option>
+                        <option value="CONCLUIDO">Concluído</option>
+                        <option value="ENTREGUE">Entregue</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Responsável: <span class="obrigatorio"
+                            name="responsavelProjeto">*</span></label>
+                    <input type="text" class="form-control" id="responsavelProjeto">
+                </div>
+            </div><br>
+
+            <div class="d-grid gap-2">
+                <div id="liveAlertPlaceholder"></div>
+                <button type="button" class="btn btn-success" id="liveAlertBtn">Salvar</button>
+
+                <button type="reset" class="btn btn-outline-danger" id="cancelar">Cancelar</button>
+            </div>
+
+        </form>
+
+
+    </div>
+
+    <!-- Estrutura do Modal -->
+    <div class="modal fade" id="modalProjeto" tabindex="-1" aria-labelledby="modalProjeto" aria-hidden="true">
+        <!-- <div class="modal-dialog modal-lg"> -->
+        <div class="modal-dialog modal-xl"> <!-- modal-lg para mais espaço -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTabelaLabel">Dados dos Usuários</h5>
+                    <button type="button" class="btn-close" data-bs-close="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <!-- Container responsivo para a tabela -->
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Nome do projeto</th>
+                                    <th>Descrição</th>
+                                    <th>Data de Criação</th>
+                                    <th>Data de Conslusão</th>
+                                    <th>Status</th>
+                                    <th>Responsável</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Exemplo 1: Projeto Concluído -->
+                                <tr>
+                                    <td>E-commerce Alpha</td>
+                                    <td>Desenvolvimento de loja virtual para eletrônicos.</td>
+                                    <td>01/02/2024</td>
+                                    <td>15/03/2024</td>
+                                    <td><span class="badge bg-success">Concluído</span></td>
+                                    <td>Carlos Oliveira</td>
+                                </tr>
+
+                                <!-- Exemplo 2: Projeto Em Andamento -->
+                                <tr>
+                                    <td>App Mobile Saúde</td>
+                                    <td>Criação de interface para agendamento de consultas.</td>
+                                    <td>10/04/2024</td>
+                                    <td>-</td>
+                                    <td><span class="badge bg-warning text-dark">Em Andamento</span></td>
+                                    <td>Ana Costa</td>
+                                </tr>
+
+                                <!-- Exemplo 3: Projeto Atrasado/Pendente -->
+                                <tr>
+                                    <td>Migração de Banco de Dados</td>
+                                    <td>Transferência de dados do servidor antigo para a nuvem.</td>
+                                    <td>20/03/2024</td>
+                                    <td>30/04/2024</td>
+                                    <td><span class="badge bg-danger">Atrasado</span></td>
+                                    <td>Ricardo Souza</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/alertProjeto.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Icons (opcional) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+
+
+
+</body>
+
+</html>
