@@ -22,7 +22,7 @@ const alertTrigger = document.getElementById('liveAlertBtn')
 
 if (alertTrigger) {
   alertTrigger.addEventListener('click', () => {
-    appendAlert('Tarefa adicionada com sucesso!', 'success')
+    appendAlert('Tarefa cadastrada com sucesso!', 'success')
   })
 }
 
