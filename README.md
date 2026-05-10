@@ -1,4 +1,3 @@
-content = """# 🚀 Projeto Gerenciador de Projetos e Tarefas
 
 Este projeto é uma aplicação web focada na organização e visualização de projetos e tarefas, utilizando uma interface moderna, responsiva e intuitiva.
 
