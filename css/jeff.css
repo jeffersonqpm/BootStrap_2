@@ -22,7 +22,12 @@ h1{
 
 label{
    font-weight: bold;
+   
+}
+.DescricaoPlaceholder{
 
+   font-weight: normal;
+   color: rgb(182, 185, 187);
 }
 
 .prioridadetarefa{
